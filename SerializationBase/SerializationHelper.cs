@@ -17,7 +17,7 @@ namespace SerializationBase
 
         }
 
-        private static void Save<TEntity>(TEntity[] entities, string path) 
+        public static void Save<TEntity>(TEntity[] entities, string path) 
         {
             if (entities == null)
                 throw new ArgumentNullException("entities");
@@ -31,7 +31,7 @@ namespace SerializationBase
             }
         }
 
-        private static TEntity[] Load<TEntity>(string path) where TEntity : new()
+        public static TEntity[] Load<TEntity>(string path) where TEntity : new()
         {
             TEntity[] entities = null;
 
